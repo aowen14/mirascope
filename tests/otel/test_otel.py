@@ -274,6 +274,7 @@ def test_extractor_with_otel(
     mock_call: MagicMock,
     fixture_chat_completion_with_tools: ChatCompletion,
     fixture_my_openai_tool: type[OpenAITool],
+    fixture_my_openai_tool_schema: type[BaseModel],
     fixture_capotel: CapOtel,
 ) -> None:
     fixture_capotel.exporter.clear()
@@ -287,7 +288,7 @@ def test_extractor_with_otel(
         call_params = OpenAICallParams(
             model=openai_model, tools=[fixture_my_openai_tool]
         )
-        extract_schema: type[OpenAITool] = fixture_my_openai_tool
+        extract_schema: type[BaseModel] = fixture_my_openai_tool_schema
         configuration = BaseConfig(llm_ops=[], client_wrappers=[])
 
     my_extractor = TempExtractor()
@@ -305,6 +306,7 @@ async def test_async_extractor_with_otel(
     mock_call: MagicMock,
     fixture_chat_completion_with_tools: ChatCompletion,
     fixture_my_openai_tool: type[OpenAITool],
+    fixture_my_openai_tool_schema: type[BaseModel],
     fixture_capotel: CapOtel,
 ) -> None:
     fixture_capotel.exporter.clear()
@@ -318,7 +320,7 @@ async def test_async_extractor_with_otel(
         call_params = OpenAICallParams(
             model=openai_model, tools=[fixture_my_openai_tool]
         )
-        extract_schema: type[OpenAITool] = fixture_my_openai_tool
+        extract_schema: type[BaseModel] = fixture_my_openai_tool_schema
         configuration = BaseConfig(llm_ops=[], client_wrappers=[])
 
     my_extractor = TempExtractor()

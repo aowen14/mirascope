@@ -1,6 +1,9 @@
 """A module for calling Chroma's Client and Collection."""
 
 from functools import cached_property
+from typing import Any, ClassVar, Optional, Union
+
+from functools import cached_property
 from typing import Any, ClassVar, Optional, Union, cast
 
 from chromadb import Collection, EphemeralClient, HttpClient, Metadata, PersistentClient

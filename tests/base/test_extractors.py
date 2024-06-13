@@ -11,7 +11,7 @@ from mirascope.base.calls import BaseCall
 from mirascope.base.extractors import BaseExtractor
 from mirascope.base.prompts import BasePrompt
 from mirascope.base.tools import BaseTool
-from mirascope.base.types import BaseCallParams, BaseToolStream
+from mirascope.base.types import BaseCallParams
 from mirascope.openai.extractors import OpenAIExtractor
 
 

@@ -2,7 +2,6 @@
 We’ve made implementing and using tools (function calling) intuitive:
 """
 
-import os
 from typing import Literal
 
 from mirascope.openai import OpenAICall, OpenAICallParams

@@ -91,7 +91,7 @@ def test_mistral_call_stream(
 
         api_key = "test"
 
-    chunks = [chunk for chunk, _ in MistralStream(TempCall().stream())]
+    chunks = [chunk for chunk in TempCall().stream()]
     assert len(chunks) == 2
     assert chunks[0].content == "A"
     assert chunks[1].content == "B"

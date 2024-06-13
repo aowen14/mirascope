@@ -9,11 +9,12 @@ from anthropic.lib.streaming import (
     MessageStreamEvent,
 )
 from anthropic.types import (
+    ContentBlockDeltaEvent,
     Message,
     MessageStartEvent,
-    RawContentBlockStartEvent,
+    MessageStreamEvent,
     TextBlock,
-    ToolUseBlock,
+    TextDelta,
     Usage,
 )
 

@@ -28,8 +28,7 @@ while True:
     if librarian.question == "exit":
         break
     response = librarian.call()
-    if response.user_message_param:
-        librarian.history.append(response.user_message_param)
+    librarian.history.append({"role": "user", "content": librarian.question})
     librarian.history.append(response.message_param)
     print(f"(Assistant): {response.content}")
 

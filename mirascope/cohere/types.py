@@ -1,6 +1,5 @@
 """Types for interacting with Cohere chat models using Mirascope."""
 
-from collections.abc import AsyncGenerator, Generator
 from typing import Any, Literal, Optional, Sequence, Type, Union
 
 from cohere import (

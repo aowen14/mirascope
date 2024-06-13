@@ -6,7 +6,6 @@ for use with that specific model provider. This example uses `OpenAITool`, but y
 just as easily use `GeminiTool` with no additional change.
 """
 
-import os
 from typing import Literal
 
 from pydantic import Field

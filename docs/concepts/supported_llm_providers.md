@@ -452,10 +452,9 @@ pip install mirascope[gemini]
 
 If you do not have provider-specific syntax (which we will go over later), you can take advantage of the `from_prompt` classmethod to do the heavy lifting for you.
 
-```python hl_lines="15"
+```python hl_lines="14"
 from google.generativeai import configure
 from mirascope.gemini import GeminiCall, GeminiCallParams
-from mirascope.openai import OpenAICall, OpenAICallParams
 
 configure(api_key="YOUR_GEMINI_API_KEY")
 
@@ -472,7 +471,7 @@ response = recipe_recommender(ingredient="apples").call()
 print(response.content)
 ```
 
-With just 1 line and some imports you can immediately test out other providers. Note that if you are using `call_params` the keys must match from provider to provider. You can also swap the provider class manually.
+With just 1 line and some imports you can immediately test out other providers. You can also swap the provider class manually.
 
 ### The manual case
 

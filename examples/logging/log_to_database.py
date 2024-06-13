@@ -1,6 +1,8 @@
 """
 Logging your LLM responses to a postgres database
 """
+
+import logging
 import os
 from typing import Optional
 
